@@ -2,7 +2,7 @@
   "name": "Colage-Student",
   "version": "1.0.0",
   "description": "Colage Student Application",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "rollback": "knex migrate:rollback",
     "migrate": "knex migrate:latest",
