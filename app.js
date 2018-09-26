@@ -8,4 +8,7 @@ app.use(parser.json())
 app.use(parser.urlencoded({ extended: false }))
 app.use(cors())
 
-app.listen(3000, () => console.log("Hello World"))
+app.set("port", process.env.PORT || 3000)
+app.set("view engine", "hbs")
+
+app.listen(app.get("port"), () => console.log("Hello World"))
