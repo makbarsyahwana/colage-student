@@ -1,14 +1,7 @@
-import express from "express"
-import parser from "body-parser"
-import cors from "cors"
-
+const express = require("express")
 const app = express()
+const port = 3000
 
-app.use(parser.json())
-app.use(parser.urlencoded({ extended: false }))
-app.use(cors())
 app.get("/", (req, res) => res.send("Hello World!"))
 
-app.listen(3000, () => {
-  console.log("Hello world!")
-})
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
